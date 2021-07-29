@@ -125,9 +125,11 @@ $${#eq:boltzmann}
 
 `\clearpage`、`\newpage`で改ページ。
 
-``` {python}
+\begin{lstlisting}[caption=キャプション,label=cord:python,language=python]
 # 日本語のメモ
 N = 20
 for i in range(N):
   print(i % 3 // 2 * "Fizz" + i % 5 // 4 * "Buzz" or i + 1)
-```
+\end{lstlisting}
+
+\ref{cord:python}はPythonにおけるFizzBuzzの例
