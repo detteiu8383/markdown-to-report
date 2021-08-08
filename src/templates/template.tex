@@ -1,10 +1,10 @@
 \RequirePackage{plautopatch}
-\documentclass[uplatex,dvipdfmx,a4paper]{jsarticle}
+\documentclass[uplatex,dvipdfmx,a4paper,11pt]{jsarticle}
 % 余白を調製
 % \usepackage[includeheadfoot,top=20truemm,bottom=20truemm, right=25truemm,left=25truemm]{geometry}
 
 \usepackage{graphicx}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
 \usepackage{bm}
 \usepackage{longtable} % 表組みに必要
@@ -25,8 +25,10 @@
 }
 
 % コードブロック書くときに必要
-\usepackage{listings,jvlisting}
+\usepackage{listings,jlisting}
 \newcommand{\passthrough}[1]{\texttt{#1}}
+
+\renewcommand{\lstlistingname}{ソースコード} % コードブロックのキャプションを変更
 
 % 画像を記述された場所に挿入(デフォルトではページ上部に挿入されてしまう)
 \usepackage{float}
@@ -59,10 +61,17 @@
 \begin{document}
 \lstset{
     frame={tb},
-    basicstyle=\ttfamily,
+    basicstyle={\small\ttfamily},               % 全文字に適用される設定
+    identifierstyle={\color[HTML]{24292e}},     % 識別子に〃
+    commentstyle={\color[HTML]{50a14f}},        % コメントに〃
+    keywordstyle={\color[HTML]{d73a49}},        % キーワード(ifとかforとか)に〃
+    ndkeywordstyle={\color[HTML]{6f42c1}},      % 日本語訳がわからんけど多分組み込み関数とかに〃
+    stringstyle={\color[HTML]{032f62}},         % 文字列リテラルに〃
+    showstringspaces=false,
     numbers=left,
+    xrightmargin=0zw,
+    xleftmargin=2zw,
     numbersep=10pt,
-    numberstyle=\tiny,
     tabsize=2,
     extendedchars=true,
     columns=fixed,
