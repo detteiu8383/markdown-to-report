@@ -1,10 +1,6 @@
-\begin{center}
-{\LARGE 真ん中タイトル}
-\end{center}
+\reportTitle{真ん中タイトル}
 
-\begin{flushright}
-{\large 右寄せ　名前}
-\end{flushright}
+\reportName{右寄せ　名前}
 
 # Markdown2PDF
 
@@ -34,7 +30,7 @@
 
 [タイトル付きのリンク](https://trap.jp/post/1123/ "タイトル")
 
-自動リンク https://trap.jp/post/1123/
+自動リンク <https://trap.jp/post/1123/>
 
 ここは本文です。
 
@@ -126,10 +122,12 @@ $${#eq:boltzmann}
 `\clearpage`、`\newpage`で改ページ。
 
 \begin{lstlisting}[caption=キャプション,label=lst:python,language=python]
+
 # 日本語のメモ
+
 N = 20
 for i in range(N):
-  print(i % 3 // 2 * "Fizz" + i % 5 // 4 * "Buzz" or i + 1)
+  print(i % 3 // 2 *"Fizz" + i % 5 // 4* "Buzz" or i + 1)
 \end{lstlisting}
 
 ソースコード[\ref{lst:python}]はPythonにおけるFizzBuzzの例

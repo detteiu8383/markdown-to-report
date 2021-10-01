@@ -56,6 +56,9 @@
 % miscのタイトルはそのまま表示する
 \DeclareFieldFormat[misc]{title}{#1}
 
+\newcommand{\reportTitle}[1]{\begin{center}{\LARGE #1}\end{center}}
+\newcommand{\reportName}[1]{\begin{flushright}{\large #1}\end{flushright}}
+
 \addbibresource {references.bib}
 
 \begin{document}
