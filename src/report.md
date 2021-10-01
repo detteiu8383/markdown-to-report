@@ -20,17 +20,15 @@
   - biber
   - Latexmk
 
-## Markdown 形式と LaTeX コマンドの対応
+## Markdown形式とLaTeXコマンドの対応
 
 <https://pandoc.org/MANUAL.html#pandocs-markdown>を参考にすると理解が深まると思います。
 
-普通の文章。**太字**。_斜体_。
+普通の文章。**太字**。*italic*。~~取り消し線~~。
 
 明示したリンク <https://trap.jp/post/1123/>
 
 [タイトル付きのリンク](https://trap.jp/post/1123/ "タイトル")
-
-自動リンク <https://trap.jp/post/1123/>
 
 ここは本文です。
 
@@ -40,15 +38,9 @@
 
 # h1 見出し 1
 
-本文本文本文本文本文本文
-
 ## h2 見出し 1 {#sec:h2_1}
 
-本文本文本文本文本文本文
-
 ## h2 見出し 2 {-}
-
-番号がつかない見出し
 
 ### h3 見出し
 
@@ -56,15 +48,7 @@
 
 #### h4 見出し
 
-本文本文本文本文本文本文
-
 ##### h5 見出し
-
-本文本文本文本文本文本文
-
-###### h6 見出し
-
-本文本文本文本文本文本文
 
 ---
 
@@ -88,18 +72,17 @@
 ![pdf画像の挿入](./img/sample_image.pdf){#fig:pdf width=40%}\hfill
 ![jpg画像の挿入](./img/sample_image.jpg){#fig:jpg width=40%}
 
-![](./img/mitsu.png){width=15%}
-![](./img/mitsu.png){width=20%}
-![](./img/mitsu.png){width=15%}
-![](./img/mitsu.png){width=10%}
+![画像を](./img/mitsu.png){width=15%}
+![横並びに](./img/mitsu.png){width=20%}
+![したり](./img/mitsu.png){width=15%}
+![できる](./img/mitsu.png){width=10%}
 
-![](./img/so.png){width=15%}\hfill
-![](./img/so.png){width=20%}\hfill
-![](./img/so.png){width=15%}\hfill
-![](./img/so.png){width=10%}
+![間隔を](./img/so.png){width=15%}\hfill
+![あけて](./img/so.png){width=20%}\hfill
+![並べることも](./img/so.png){width=15%}\hfill
+![できる](./img/so.png){width=10%}
 
 画像の挿入テスト
-
 </div>
 
 [@fig:narabi]に、各画像の挿入結果を示す。[@fig:pdf]は pdf 形式、[@fig:png]は png 形式、[@fig:jpg]は jpg 形式の画像である。
@@ -122,7 +105,6 @@ $${#eq:boltzmann}
 `\clearpage`、`\newpage`で改ページ。
 
 \begin{lstlisting}[caption=キャプション,label=lst:python,language=python]
-
 # 日本語のメモ
 
 N = 20
@@ -130,4 +112,4 @@ for i in range(N):
   print(i % 3 // 2 *"Fizz" + i % 5 // 4* "Buzz" or i + 1)
 \end{lstlisting}
 
-ソースコード[\ref{lst:python}]はPythonにおけるFizzBuzzの例
+ソースコード[\ref{lst:python}]はPythonにおけるFizzBuzzの例。
